@@ -9,7 +9,9 @@
   window.smmlyGc = gc;
   function msg() { var p = ''; try { if (window.smmlyShareMsg) p = window.smmlyShareMsg() || ''; } catch (e) {} return p + BASE + ' ' + URL; }
   var NAME = B.getAttribute('data-tool-name') || 'أدوات صمّم لي';
-  var MAIL = 'mailto:info@smmlystore.com';
+  var FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSfkoVlsHHFbkSL3dOYxQBvmHkEROpVL5dAzttXjR3acdg8Ezg/formResponse';
+  var F = { tool: 'entry.1125378987', stars: 'entry.2027499042', msg: 'entry.984069794', name: 'entry.1729344433', city: 'entry.1364109731', ok: 'entry.1301791893' };
+  var sent = false;
   var stars = document.getElementById('stars'), rateMsg = document.getElementById('rateMsg'), rated = false, starV = 0;
   if (stars) stars.addEventListener('click', function (e) {
     var b = e.target.closest('button[data-v]'); if (!b) return;
@@ -23,7 +25,7 @@
     if (rateMsg) rateMsg.textContent = starV >= 4 ? 'شكراً لك! 🌟 اكتب لنا كلمة تحت، أو شاركها مع ربعك.' : 'شكراً على صراحتك، قول لنا تحت وش نحسّن.';
   });
 
-  /* ---- اكتب لنا رأيك: يفتح الإيميل برسالة جاهزة، وما ينحفظ أي شي في الموقع ---- */
+  /* ---- اكتب لنا رأيك: يرسل لنموذج Google بدون ما يطلع الزائر من الصفحة، وما ينحفظ أي شي في الموقع ---- */
   var rvName = document.getElementById('rvName'), rvCity = document.getElementById('rvCity'), rvMsg = document.getElementById('rvMsg'),
     rvOk = document.getElementById('rvOk'), rvSend = document.getElementById('rvSend'), rvErr = document.getElementById('rvErr'),
     rvThanks = document.getElementById('rvThanks'), rvCount = document.getElementById('rvCount');
@@ -33,16 +35,27 @@
     return 'رأي جديد عن ' + NAME + ': ⭐' + starV + '/5 — ' + clean(rvMsg.value, 300) + ' — ' + (who || 'بدون اسم') +
       ' (موافق على النشر: ' + (rvOk && rvOk.checked ? 'نعم' : 'لا') + ')';
   }
-  function updateReview() { if (rvSend && rvMsg) rvSend.href = MAIL + '?subject=' + encodeURIComponent('رأي عن ' + NAME + ' ⭐' + starV + '/5') + '&body=' + encodeURIComponent(reviewText()); }
+  function updateReview() {}
   if (rvSend && rvMsg) {
     [rvName, rvCity, rvMsg, rvOk].forEach(function (el) { if (el) el.addEventListener(el === rvOk ? 'change' : 'input', updateReview); });
     rvMsg.addEventListener('input', function () { if (rvCount) rvCount.textContent = rvMsg.value.length + ' / 300'; if (rvErr) rvErr.hidden = true; });
     rvSend.addEventListener('click', function (e) {
-      updateReview();
+      e.preventDefault();
+      if (sent) return;
       var err = !starV ? 'اختر عدد النجوم فوق أول.' : clean(rvMsg.value, 300).length < 3 ? 'اكتب رأيك في سطر قصير.' : '';
-      if (err) { e.preventDefault(); rvErr.textContent = err; rvErr.hidden = false; (starV ? rvMsg : stars).scrollIntoView({ block: 'center', behavior: 'smooth' }); return; }
-      gc('review-' + TOOL + '-' + starV, 'رأي ' + TOOL);
-      if (rvThanks) rvThanks.hidden = false;
+      if (err) { rvErr.textContent = err; rvErr.hidden = false; (starV ? rvMsg : stars).scrollIntoView({ block: 'center', behavior: 'smooth' }); return; }
+      var fd = new FormData();
+      fd.append(F.tool, NAME); fd.append(F.stars, String(starV)); fd.append(F.msg, clean(rvMsg.value, 300));
+      fd.append(F.name, clean(rvName && rvName.value, 30)); fd.append(F.city, clean(rvCity && rvCity.value, 30));
+      fd.append(F.ok, rvOk && rvOk.checked ? 'نعم' : 'لا');
+      rvSend.setAttribute('aria-disabled', 'true'); rvSend.style.opacity = '.6'; rvSend.textContent = 'جاري الإرسال…';
+      var finish = function () {
+        sent = true; rvSend.textContent = 'وصلنا رأيك ✓';
+        if (rvThanks) rvThanks.hidden = false;
+        gc('review-' + TOOL + '-' + starV, 'رأي ' + TOOL);
+      };
+      try { fetch(FORM, { method: 'POST', mode: 'no-cors', body: fd }).then(finish, function () { rvSend.removeAttribute('aria-disabled'); rvSend.style.opacity = ''; rvSend.textContent = 'أرسل رأيك'; rvErr.textContent = 'ما قدرنا نرسل، تأكد من الإنترنت وجرّب مرة ثانية.'; rvErr.hidden = false; }); }
+      catch (x) { finish(); }
     });
     updateReview();
   }
