@@ -5,9 +5,11 @@
   'use strict';
 
   var MAX_BYTES = 10 * 1024 * 1024;
-  var MAMMOTH_SRC = 'assets/vendor/mammoth/mammoth.browser.min.js'; // mammoth 1.8.0
+  // Vendor files sit next to this script (assets/), whichever page folder loads it.
+  var BASE = ((document.currentScript && document.currentScript.src) || 'assets/app.js').replace(/[^\/]*$/, '');
+  var MAMMOTH_SRC = BASE + 'vendor/mammoth/mammoth.browser.min.js'; // mammoth 1.8.0
   if (window.pdfjsLib) {
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'assets/vendor/pdfjs/pdf.worker.min.js'; // pdf.js 3.11.174
+    pdfjsLib.GlobalWorkerOptions.workerSrc = BASE + 'vendor/pdfjs/pdf.worker.min.js'; // pdf.js 3.11.174
   }
 
   var $ = function (id) { return document.getElementById(id); };
@@ -331,6 +333,7 @@
   function finish(checks, ex, wc, jd, imageOnly) {
     var score = checks.reduce(function (s, c) { return s + c.got; }, 0);
     score = Math.max(0, Math.min(95, Math.round(score)));
+    try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: 'fahs-check', title: 'فحص سيرة', event: true }); } catch (e) {}
     return { checks: checks, score: score, words: wc, jd: jd, imageOnly: imageOnly, ex: ex };
   }
 
