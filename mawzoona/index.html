@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>حاسبة النسبة الموزونة 2026 للقبول الجامعي | صمّم لي</title>
+<meta name="description" content="احسب نسبتك الموزونة مجاناً من نسبة الثانوي والقدرات والتحصيلي، بأوزان جاهزة 30/30/40 و40/30/30 و50/50 أو أوزانك الخاصة، مع شرح الحساب.">
+<meta name="theme-color" content="#141e38">
+<link rel="canonical" href="https://fooz1980k-sudo.github.io/fahs/mawzoona/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:site_name" content="صمّم لي">
+<meta property="og:title" content="حاسبة النسبة الموزونة للقبول الجامعي | صمّم لي">
+<meta property="og:description" content="ثانوي + قدرات + تحصيلي: احسب نسبتك الموزونة بالأوزان اللي تبيها، مجاناً.">
+<meta property="og:url" content="https://fooz1980k-sudo.github.io/fahs/mawzoona/">
+<meta property="og:image" content="https://fooz1980k-sudo.github.io/fahs/assets/og-mawzoona.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="حاسبة النسبة الموزونة للقبول الجامعي | صمّم لي">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="حاسبة النسبة الموزونة للقبول الجامعي | صمّم لي">
+<meta name="twitter:description" content="ثانوي + قدرات + تحصيلي: احسب نسبتك الموزونة بالأوزان اللي تبيها، مجاناً.">
+<meta name="twitter:image" content="https://fooz1980k-sudo.github.io/fahs/assets/og-mawzoona.jpg">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-tool="mawzoona" data-tool-name="حاسبة النسبة الموزونة" data-url="https://fooz1980k-sudo.github.io/fahs/mawzoona/" data-share="احسب نسبتك الموزونة للقبول الجامعي مجاناً:">
+<a class="skip" href="#main">تخطَّ للمحتوى</a>
+
+<header class="hero">
+  <div class="wrap">
+    <a class="brand" href="https://smmlystore.com/" target="_blank" rel="noopener" aria-label="متجر صمّم لي">
+      <span class="brand-mark" aria-hidden="true">ص</span>
+      <span class="brand-name">صمّم لي</span>
+    </a>
+    <nav class="topnav" aria-label="أدوات صمّم لي المجانية"><a href="../">الرئيسية</a><a href="../fahs-cv/">فحص السيرة</a><a href="../mukafaa/">نهاية الخدمة</a><a href="./" aria-current="page">النسبة الموزونة</a><a href="../rateb/">صافي الراتب</a><a href="../khitab/">إيميل التقديم</a><a href="../dareeba/">الضريبة 15٪</a></nav>
+    <h1>حاسبة <span class="accent">النسبة الموزونة</span></h1>
+    <p class="lead">احسب نسبتك الموزونة للقبول الجامعي من نسبة الثانوي والقدرات والتحصيلي، بالأوزان اللي تبيها.</p>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <form class="card" id="wForm" novalidate aria-labelledby="w-title">
+    <h2 id="w-title">درجاتك</h2>
+    <div class="row3">
+      <div><label class="fld" for="sHs">الثانوي ٪</label><input id="sHs" class="inp" type="text" inputmode="decimal" placeholder="95"></div>
+      <div><label class="fld" for="sQ">القدرات</label><input id="sQ" class="inp" type="text" inputmode="decimal" placeholder="80"></div>
+      <div id="tWrap"><label class="fld" for="sT">التحصيلي</label><input id="sT" class="inp" type="text" inputmode="decimal" placeholder="85"></div>
+    </div>
+    <p class="hint" id="tHint" hidden>الأوزان الحالية ما فيها تحصيلي، فما ندخله في الحساب.</p>
+
+    <fieldset>
+      <legend>الأوزان</legend>
+      <div class="seg seg-wrap" role="group" aria-label="أوزان جاهزة">
+        <button type="button" data-preset="p334" class="on" aria-pressed="true"><span>ثانوي 30 · قدرات 30</span><span>تحصيلي 40</span></button>
+        <button type="button" data-preset="p433" aria-pressed="false"><span>ثانوي 40 · قدرات 30</span><span>تحصيلي 30</span></button>
+        <button type="button" data-preset="p55" aria-pressed="false"><span>ثانوي 50 · قدرات 50</span><span>بدون تحصيلي</span></button>
+        <button type="button" data-preset="custom" aria-pressed="false">أوزان خاصة</button>
+      </div>
+      <div id="wCustom" hidden>
+        <div class="row3">
+          <div><label class="fld" for="wHs">وزن الثانوي ٪</label><input id="wHs" class="inp" type="text" inputmode="decimal"></div>
+          <div><label class="fld" for="wQ">وزن القدرات ٪</label><input id="wQ" class="inp" type="text" inputmode="decimal"></div>
+          <div><label class="fld" for="wT">وزن التحصيلي ٪</label><input id="wT" class="inp" type="text" inputmode="decimal"></div>
+        </div>
+        <p class="hint">مجموع الأوزان لازم يكون 100. خذ الأوزان من موقع الجامعة أو دليل القبول.</p>
+      </div>
+    </fieldset>
+
+    <button class="btn btn-primary btn-block" type="submit">احسب نسبتي الموزونة</button>
+    <p class="error" id="wErr" role="alert" hidden></p>
+  </form>
+
+  <section id="wOut" class="results" aria-live="polite" tabindex="-1" hidden>
+    <div class="card out-card">
+      <h2>نسبتك الموزونة التقديرية</h2>
+      <p class="out-amount" id="wTotal"></p>
+      <p class="out-note" id="wExplain"></p>
+      <table class="bd"><tbody id="wTable"></tbody></table>
+      <p class="disclaimer" style="margin-top:12px">كل جامعة وكلية تحدد أوزانها ونسبها بنفسها، وممكن تتغير كل سنة. تأكد من دليل القبول الرسمي للجامعة.</p>
+        <button class="btn btn-gold btn-block" id="cardBtn" type="button">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M18 16a3 3 0 0 0-2.4 1.2l-6.7-3.4a3 3 0 0 0 0-1.6l6.7-3.4A3 3 0 1 0 15 7l-6.7 3.4a3 3 0 1 0 0 3.2L15 17a3 3 0 1 0 3-1Z"/></svg>
+          <span>حمّل بطاقة نتيجتك وشاركها</span>
+        </button>
+        <p class="card-msg" id="cardMsg" aria-live="polite">البطاقة فيها النسبة والأوزان بس، بدون اسمك.</p>
+    </div>
+
+      <div class="card cta-card">
+        <h3>تبي تضمن قبولك؟ جهّز ملفك صح</h3>
+        <p>نساعدك في التقديم على الجامعات، ونكتب لك خطاب الغرض للابتعاث والقبول.</p>
+        <a class="btn btn-primary btn-block" target="_blank" rel="noopener" data-cta="uni" href="https://smmlystore.com/%D8%A8%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D9%82%D8%A8%D9%88%D9%84-%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D9%8A-%D8%B5%D9%85%D9%85-%D9%84%D9%8A/p970248255">باقة القبول الجامعي</a>
+        <a class="btn btn-gold btn-block" target="_blank" rel="noopener" data-cta="sop" href="https://smmlystore.com/%D8%AE%D8%B7%D8%A7%D8%A8-%D8%A7%D9%84%D8%BA%D8%B1%D8%B6-%D9%84%D9%84%D8%A7%D8%A8%D8%AA%D8%B9%D8%A7%D8%AB-%D9%88%D8%A7%D9%84%D9%82%D8%A8%D9%88%D9%84-%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D9%8A-%D8%B5%D9%85%D9%85-%D9%84%D9%8A/p118163605">خطاب الغرض للابتعاث والقبول</a>
+        <p class="coupon">أول طلب؟ كود <code dir="ltr">FIRST15</code> خصم 15٪</p>
+      </div>
+
+      <div class="card extra-card" id="reviewBox">
+        <h3>الأداة أفادتك؟</h3>
+        <div class="stars" id="stars" role="radiogroup" aria-label="قيّم بالنجوم">
+          <button type="button" data-v="5" aria-label="5 نجوم">★</button><button type="button" data-v="4" aria-label="4 نجوم">★</button><button type="button" data-v="3" aria-label="3 نجوم">★</button><button type="button" data-v="2" aria-label="نجمتين">★</button><button type="button" data-v="1" aria-label="نجمة">★</button>
+        </div>
+        <p class="small muted" id="rateMsg" aria-live="polite">تقييمك يساعدنا نطوّر الأداة.</p>
+        <div class="review">
+          <h4 class="review-h">اكتب لنا رأيك</h4>
+          <div class="row2">
+            <div><label class="sr-only" for="rvName">الاسم</label><input id="rvName" class="inp" type="text" maxlength="30" autocomplete="given-name" placeholder="اسمك أو لقبك (اختياري)"></div>
+            <div><label class="sr-only" for="rvCity">المدينة</label><input id="rvCity" class="inp" type="text" maxlength="30" placeholder="مدينتك (اختياري)"></div>
+          </div>
+          <label class="sr-only" for="rvMsg">رأيك</label>
+          <textarea id="rvMsg" class="inp" rows="3" maxlength="300" placeholder="وش عجبك؟ ووش تبينا نطوّر؟"></textarea>
+          <p class="rv-count small muted" id="rvCount" aria-live="polite">0 / 300</p>
+          <label class="consent"><input type="checkbox" id="rvOk"><span>أوافق إن رأيي ينعرض في الموقع</span></label>
+          <p class="error small" id="rvErr" role="alert" hidden></p>
+          <a class="btn btn-primary btn-block" id="rvSend" href="mailto:info@smmlystore.com"><span>أرسل رأيك بالإيميل</span></a>
+          <p class="rv-thanks" id="rvThanks" aria-live="polite" hidden>شكراً لك 🤍 اضغط «إرسال» في الإيميل ويوصلنا رأيك، وبنعرضه بعد المراجعة.</p>
+        </div>
+        <h3 class="mt">شاركها مع أحد يقدّم على الجامعة</h3>
+        <div class="share">
+          <a class="btn btn-share" id="shareWa" target="_blank" rel="noopener" href="#">واتساب</a>
+          <a class="btn btn-share" id="shareX" target="_blank" rel="noopener" href="#">X</a>
+          <button class="btn btn-share" id="shareCopy" type="button">نسخ الرابط</button>
+        </div>
+      </div>
+  </section>
+
+  <section class="card how" aria-labelledby="how-w">
+    <h2 id="how-w">كيف تنحسب النسبة الموزونة؟</h2>
+    <p>نضرب كل درجة في وزنها ونجمعها. مثال بأوزان (ثانوي 30٪، قدرات 30٪، تحصيلي 40٪) لطالب ثانويه 95 وقدراته 80 وتحصيليه 85:</p>
+    <p class="math" dir="ltr">95×0.30 + 80×0.30 + 85×0.40<br>= 28.5 + 24 + 34 = <b>86.5</b></p>
+    <p class="small muted">الأوزان الجاهزة هنا أمثلة شائعة بس، وما تمثل جامعة معينة.</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="foot-msg">حنا عائلة صمّم لي… نشتغل لأجلك بحب، وحلمنا مليون أخ وأخت 🤍 <a href="{R}#family">مد يدك لنا</a></p>
+    <p>أدوات مجانية من <a href="https://smmlystore.com/" target="_blank" rel="noopener">متجر صمّم لي</a> · سير ذاتية وخدمات للوظيفة والدراسة</p>
+    <p class="small foot-tools"><a href="../">كل الأدوات</a> · <a href="../fahs-cv/">افحص سيرتك ATS</a> · <a href="../mukafaa/">حاسبة مكافأة نهاية الخدمة</a> · <a href="../mawzoona/">حاسبة النسبة الموزونة</a> · <a href="../rateb/">حاسبة صافي الراتب</a> · <a href="../khitab/">مولّد إيميل التقديم</a> · <a href="../dareeba/">حاسبة ضريبة القيمة المضافة</a></p>
+    <p class="small">تابع «صمّم لي»:
+      <a href="https://www.snapchat.com/add/ii.i69i" target="_blank" rel="noopener">سناب</a> ·
+      <a href="https://www.tiktok.com/@smmli_sa" target="_blank" rel="noopener">تيك توك</a> ·
+      <a href="https://www.instagram.com/smmli_sa" target="_blank" rel="noopener">انستقرام</a> ·
+      <a href="https://x.com/smmli_sa" target="_blank" rel="noopener">X</a>
+    </p>
+    <p class="small">كل الأدوات تشتغل داخل جهازك: ما نحفظ ولا نرسل أي شي تكتبه أو ترفعه. نحسب بس عدد الزيارات والاستخدام بشكل مجهول، بدون أي بيانات شخصية.</p>
+  </div>
+</footer>
+
+<script src="mawzoona.js"></script>
+<script src="../assets/extras.js"></script>
+<script src="../assets/growth.js"></script>
+<script data-goatcounter="https://smmly-fahs.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
