@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>حاسبة مكافأة نهاية الخدمة 2026 | صمّم لي</title>
+<meta name="description" content="احسب مكافأة نهاية الخدمة مجاناً حسب نظام العمل السعودي (المادة 84 و85): استقالة أو انتهاء عقد أو فصل، بالتواريخ أو بالمدة، مع تفصيل الحساب خطوة بخطوة.">
+<meta name="theme-color" content="#141e38">
+<link rel="canonical" href="https://fooz1980k-sudo.github.io/fahs/mukafaa/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:site_name" content="صمّم لي">
+<meta property="og:title" content="حاسبة مكافأة نهاية الخدمة 2026 | صمّم لي">
+<meta property="og:description" content="كم مكافأتك لو استقلت أو انتهى عقدك؟ احسبها حسب نظام العمل السعودي مع التفصيل، مجاناً.">
+<meta property="og:url" content="https://fooz1980k-sudo.github.io/fahs/mukafaa/">
+<meta property="og:image" content="https://fooz1980k-sudo.github.io/fahs/assets/og-mukafaa.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="حاسبة مكافأة نهاية الخدمة من صمّم لي">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="حاسبة مكافأة نهاية الخدمة 2026 | صمّم لي">
+<meta name="twitter:description" content="احسب مكافأة نهاية الخدمة حسب نظام العمل السعودي (المادة 84 و85) مع التفصيل.">
+<meta name="twitter:image" content="https://fooz1980k-sudo.github.io/fahs/assets/og-mukafaa.jpg">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-tool="mukafaa" data-tool-name="حاسبة مكافأة نهاية الخدمة" data-url="https://fooz1980k-sudo.github.io/fahs/mukafaa/" data-share="احسب مكافأة نهاية الخدمة مجاناً حسب نظام العمل السعودي:">
+<a class="skip" href="#main">تخطَّ للمحتوى</a>
+
+<header class="hero">
+  <div class="wrap">
+    <a class="brand" href="https://smmlystore.com/" target="_blank" rel="noopener" aria-label="متجر صمّم لي">
+      <span class="brand-mark" aria-hidden="true">ص</span>
+      <span class="brand-name">صمّم لي</span>
+    </a>
+    <nav class="topnav" aria-label="أدوات صمّم لي المجانية"><a href="../">الرئيسية</a><a href="../fahs-cv/">فحص السيرة</a><a href="./" aria-current="page">نهاية الخدمة</a><a href="../mawzoona/">النسبة الموزونة</a><a href="../rateb/">صافي الراتب</a><a href="../khitab/">إيميل التقديم</a><a href="../dareeba/">الضريبة 15٪</a></nav>
+    <h1>حاسبة مكافأة <span class="accent">نهاية الخدمة</span></h1>
+    <p class="lead">احسب مكافأتك لو استقلت أو انتهى عقدك، حسب نظام العمل السعودي، مع تفصيل الحساب.</p>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <form class="card" id="calcForm" novalidate aria-labelledby="calc-title">
+    <h2 id="calc-title">بياناتك</h2>
+
+    <label class="fld" for="wage">آخر أجر شهري (ريال)</label>
+    <input id="wage" class="inp" type="text" inputmode="decimal" autocomplete="off" placeholder="مثال: 10000" aria-describedby="wageHint">
+    <p class="hint" id="wageHint">النظام يحسب المكافأة على <strong>آخر أجر</strong>. اكتب الأساسي + بدل السكن، وأضف البدلات الثابتة اللي تنصرف لك كل شهر (مثل النقل) إذا كانت جزء من أجرك. ما تدري وش يدخل؟ حط الأساسي + السكن كتقدير.</p>
+
+    <fieldset>
+      <legend>مدة الخدمة</legend>
+      <div class="seg" role="group" aria-label="طريقة إدخال المدة">
+        <button type="button" data-mode="dates" class="on" aria-pressed="true">بالتواريخ</button>
+        <button type="button" data-mode="dur" aria-pressed="false">بالسنوات والشهور</button>
+      </div>
+      <div id="byDates" class="row2">
+        <div><label class="fld" for="start">تاريخ المباشرة</label><input id="start" class="inp" type="date" min="1970-01-01"></div>
+        <div><label class="fld" for="end">آخر يوم عمل</label><input id="end" class="inp" type="date" min="1970-01-01"></div>
+      </div>
+      <div id="byDur" class="row3" hidden>
+        <div><label class="fld" for="yy">سنوات</label><input id="yy" class="inp" type="text" inputmode="numeric" placeholder="0"></div>
+        <div><label class="fld" for="mm">شهور</label><input id="mm" class="inp" type="text" inputmode="numeric" placeholder="0"></div>
+        <div><label class="fld" for="dd">أيام</label><input id="dd" class="inp" type="text" inputmode="numeric" placeholder="0"></div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>سبب انتهاء العلاقة</legend>
+      <div class="radios">
+        <label class="radio"><input type="radio" name="reason" value="resign"><span><b>استقالة</b><small>أنت اللي تركت العمل</small></span></label>
+        <label class="radio"><input type="radio" name="reason" value="end"><span><b>انتهاء عقد أو فصل من صاحب العمل</b><small>انتهت مدة العقد، أو صاحب العمل أنهى العقد</small></span></label>
+      </div>
+    </fieldset>
+
+    <button class="btn btn-primary btn-block" type="submit">احسب مكافأتي</button>
+    <p class="error" id="calcErr" role="alert" hidden></p>
+  </form>
+
+  <section id="calcOut" class="results" aria-live="polite" tabindex="-1" hidden>
+    <div class="card out-card">
+      <h2>مكافأتك التقديرية</h2>
+      <p class="out-amount" id="outAmount"></p>
+      <p class="out-note" id="outNote"></p>
+      <table class="bd"><tbody id="outTable"></tbody></table>
+      <p class="disclaimer" style="margin-top:12px">تقديرية حسب نظام العمل السعودي (المادة 84 و85)، وللتأكد راجع مكتب العمل أو منصة مساند/قوى.</p>
+    </div>
+
+      <div class="card cta-card">
+        <h3>قدّمت استقالتك أو انتهى عقدك؟ جهّز سيرتك للوظيفة الجاية</h3>
+        <p>فريق <strong>صمّم لي</strong> يجهّز لك سيرة متوافقة مع <bdi>ATS</bdi>، أو باقة كاملة للبحث عن عمل.</p>
+        <a class="btn btn-primary btn-block" target="_blank" rel="noopener" data-cta="cv-cat" href="https://smmlystore.com/%D8%A7%D9%84%D8%B3%D9%8A%D8%B1-%D8%A7%D9%84%D8%B0%D8%A7%D8%AA%D9%8A%D8%A9/c1544023681">شوف السير الذاتية في المتجر</a>
+        <a class="btn btn-gold btn-block" target="_blank" rel="noopener" data-cta="seeker" href="https://smmlystore.com/%D8%A8%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%A8%D8%A7%D8%AD%D8%AB-%D8%B9%D9%86-%D8%B9%D9%85%D9%84-%D8%B5%D9%85%D9%85-%D9%84%D9%8A/p1345765306">باقة الباحث عن عمل</a>
+        <a class="btn btn-ghost btn-block" data-cta="ats" href="../fahs-cv/">افحص سيرتك الحالية مجاناً</a>
+        <p class="coupon">أول طلب؟ كود <code dir="ltr">FIRST15</code> خصم 15٪</p>
+      </div>
+
+      <div class="card extra-card" id="reviewBox">
+        <h3>الأداة أفادتك؟</h3>
+        <div class="stars" id="stars" role="radiogroup" aria-label="قيّم بالنجوم">
+          <button type="button" data-v="5" aria-label="5 نجوم">★</button><button type="button" data-v="4" aria-label="4 نجوم">★</button><button type="button" data-v="3" aria-label="3 نجوم">★</button><button type="button" data-v="2" aria-label="نجمتين">★</button><button type="button" data-v="1" aria-label="نجمة">★</button>
+        </div>
+        <p class="small muted" id="rateMsg" aria-live="polite">تقييمك يساعدنا نطوّر الأداة.</p>
+        <div class="review">
+          <h4 class="review-h">اكتب لنا رأيك</h4>
+          <div class="row2">
+            <div><label class="sr-only" for="rvName">الاسم</label><input id="rvName" class="inp" type="text" maxlength="30" autocomplete="given-name" placeholder="اسمك أو لقبك (اختياري)"></div>
+            <div><label class="sr-only" for="rvCity">المدينة</label><input id="rvCity" class="inp" type="text" maxlength="30" placeholder="مدينتك (اختياري)"></div>
+          </div>
+          <label class="sr-only" for="rvMsg">رأيك</label>
+          <textarea id="rvMsg" class="inp" rows="3" maxlength="300" placeholder="وش عجبك؟ ووش تبينا نطوّر؟"></textarea>
+          <p class="rv-count small muted" id="rvCount" aria-live="polite">0 / 300</p>
+          <label class="consent"><input type="checkbox" id="rvOk"><span>أوافق إن رأيي ينعرض في الموقع</span></label>
+          <p class="error small" id="rvErr" role="alert" hidden></p>
+          <a class="btn btn-primary btn-block" id="rvSend" href="mailto:info@smmlystore.com"><span>أرسل رأيك بالإيميل</span></a>
+          <p class="rv-thanks" id="rvThanks" aria-live="polite" hidden>شكراً لك 🤍 اضغط «إرسال» في الإيميل ويوصلنا رأيك، وبنعرضه بعد المراجعة.</p>
+        </div>
+        <h3 class="mt">شاركها مع أحد خلّص عقده أو ناوي يستقيل</h3>
+        <div class="share">
+          <a class="btn btn-share" id="shareWa" target="_blank" rel="noopener" href="#">واتساب</a>
+          <a class="btn btn-share" id="shareX" target="_blank" rel="noopener" href="#">X</a>
+          <button class="btn btn-share" id="shareCopy" type="button">نسخ الرابط</button>
+        </div>
+      </div>
+  </section>
+
+      <section class="card alerts-card" aria-labelledby="alM-t">
+        <h3 id="alM-t">لا يفوتك أي تقديم 🔔</h3>
+        <p>تابع قناتنا على الواتساب، ونبلغك أول ما ينفتح تقديم في الوظائف العسكرية، وجدارة، وبرامج الخريجين، والابتعاث، والتدريب التعاوني.</p>
+        <a class="btn btn-wa btn-block alerts-go" target="_blank" rel="noopener" href="https://whatsapp.com/channel/0029VbE9THRBadmdqMmXtS2N">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+          <span>تابع قناة التنبيهات</span>
+        </a>
+        <p class="small muted alerts-note">بعد ما تتابع القناة، فعّل الجرس 🔔 عشان توصلك التنبيهات. رقمك ما يظهر لأحد.</p>
+      </section>
+
+  <section class="card how" aria-labelledby="rules-title">
+    <h2 id="rules-title">كيف تنحسب المكافأة؟</h2>
+    <ul class="rules">
+      <li><strong>أول 5 سنوات:</strong> نص راتب شهري عن كل سنة.</li>
+      <li><strong>بعد 5 سنوات:</strong> راتب شهري كامل عن كل سنة.</li>
+      <li><strong>أجزاء السنة:</strong> تنحسب بنسبتها (الشهور والأيام).</li>
+      <li><strong>انتهاء العقد أو الفصل من صاحب العمل:</strong> المكافأة كاملة.</li>
+      <li><strong>الاستقالة:</strong> أقل من سنتين ما فيه مكافأة، من سنتين لأقل من 5 سنوات الثلث، من 5 لأقل من 10 الثلثين، و10 سنوات فأكثر كاملة.</li>
+    </ul>
+    <div class="note-box">
+      <p><strong>حالات خاصة ما تحسبها الحاسبة:</strong></p>
+      <p>تستحق المكافأة كاملة حتى لو تركت العمل في حالات مثل القوة القاهرة، أو إذا كانت العاملة أنهت عقدها خلال 6 شهور من زواجها أو 3 شهور من الولادة (المادة 87)، أو إذا تركت العمل بسبب إخلال صاحب العمل حسب المادة 81.</p>
+      <p>والفصل لأحد أسباب المادة 80 ما فيه مكافأة.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="foot-msg">حنا عائلة صمّم لي… نشتغل لأجلك بحب، وحلمنا مليون أخ وأخت 🤍 <a href="{R}#family">مد يدك لنا</a></p>
+    <p>أدوات مجانية من <a href="https://smmlystore.com/" target="_blank" rel="noopener">متجر صمّم لي</a> · سير ذاتية وخدمات للوظيفة والدراسة</p>
+    <p class="small foot-tools"><a href="../">كل الأدوات</a> · <a href="../fahs-cv/">افحص سيرتك ATS</a> · <a href="../mukafaa/">حاسبة مكافأة نهاية الخدمة</a> · <a href="../mawzoona/">حاسبة النسبة الموزونة</a> · <a href="../rateb/">حاسبة صافي الراتب</a> · <a href="../khitab/">مولّد إيميل التقديم</a> · <a href="../dareeba/">حاسبة ضريبة القيمة المضافة</a></p>
+    <p class="small">تابع «صمّم لي»:
+      <a href="https://www.snapchat.com/add/ii.i69i" target="_blank" rel="noopener">سناب</a> ·
+      <a href="https://www.tiktok.com/@smmli_sa" target="_blank" rel="noopener">تيك توك</a> ·
+      <a href="https://www.instagram.com/smmli_sa" target="_blank" rel="noopener">انستقرام</a> ·
+      <a href="https://x.com/smmli_sa" target="_blank" rel="noopener">X</a>
+    </p>
+    <p class="small">كل الأدوات تشتغل داخل جهازك: ما نحفظ ولا نرسل أي شي تكتبه أو ترفعه. نحسب بس عدد الزيارات والاستخدام بشكل مجهول، بدون أي بيانات شخصية.</p>
+  </div>
+</footer>
+
+<script src="mukafaa.js"></script>
+<script src="../assets/extras.js"></script>
+<script src="../assets/growth.js"></script>
+<script data-goatcounter="https://smmly-fahs.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
